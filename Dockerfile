@@ -8,10 +8,10 @@ WORKDIR /tmp
 
 RUN git clone https://github.com/arut/nginx-rtmp-module
 RUN git clone https://github.com/openssl/openssl
-RUN wget https://nginx.org/download/nginx-1.17.1.tar.gz
-RUN tar xvf nginx-1.17.1.tar.gz
+RUN wget https://nginx.org/download/nginx-1.23.3.tar.gz
+RUN tar xvf nginx-1.23.3.tar.gz
 
-WORKDIR nginx-1.17.1
+WORKDIR nginx-1.23.3
 RUN ./configure \
 --add-module=/tmp/nginx-rtmp-module \
 --with-openssl=/tmp/openssl \
